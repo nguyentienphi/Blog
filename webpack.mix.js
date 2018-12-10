@@ -13,3 +13,13 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');
+mix.copyDirectory('resources/fonts', 'public/fonts');
+mix.styles([
+        'resources/css/bootstrap.min.css',
+        'resources/css/font-awesome.min.css',
+        'resources/css/style.css',
+    ], 'public/css/all.css');
+mix.styles(['resources/css/blog.css'], 'public/css/log.css');
+mix.js('resources/js/main.js', 'public/js');
+mix.js('resources/js/bootstrap.js', 'public/js');
+mix.js('resources/js/jquery.stellar.min.js', 'public/js');
