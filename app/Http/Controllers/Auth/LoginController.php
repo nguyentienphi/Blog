@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -36,5 +37,22 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function login(Request $request){
+        $input = [
+            'email' => $request->email,
+            'password' => $request->password
+        ];
+        if(Auth::attempt($input)){
+            if(Auth::check() && Auth::user()->role_id == config('blog.role_id')){
+                return redirect()->route('home');
+            } else {
+                return redirect()->route('admin');
+            }
+        } else {
+            $request->session()->flash(trans('message.not_match') , trans('message.error'));
+            return back();
+        }
     }
 }

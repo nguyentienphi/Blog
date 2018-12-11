@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Storage;
 
 class RegisterController extends Controller
 {
@@ -63,9 +64,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $nameImage = "";
+        if(isset($data['image'])){
+            $file = $data['image'];
+            $nameImage = time().'_'.$file->getClientOriginalName();
+            $file->storeAs('public/image/avatar', $nameImage);
+        }
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'role_id' => config('blog.role_id'),
+            'avatar' => $nameImage,
             'password' => Hash::make($data['password']),
         ]);
     }

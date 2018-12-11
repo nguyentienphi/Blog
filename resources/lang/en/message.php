@@ -34,5 +34,8 @@ return [
     'infomation' => 'All rights reserved | This template is made with ',
     'copyright' => 'Copyright',
     'colorlib' => 'Colorlib',
-    'by' => 'by'
+    'by' => 'by',
+    'adminlte' => 'AdminLTE',
+    'error' => 'Account name or password incorrect',
+    'not_match' => 'not_match',
 ];

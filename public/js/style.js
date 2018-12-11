@@ -75,7 +75,6 @@ module.exports = __webpack_require__(47);
 
 /***/ 47:
 /***/ (function(module, exports) {
-
 $(document).ready(function ($) {
     $("#logout").click(function (e) {
         $.post("logout", $("#logout-form").serialize());

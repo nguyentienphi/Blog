@@ -18,6 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('post', function(){
-    return view('post_details');
+Route::group(['prefix' => 'admin', 'as' => 'admin'], function(){
+    Route::get('', 'Admin\AdminController@index');
 });
