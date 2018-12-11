@@ -763,7 +763,7 @@ textarea.input {
 }
 
 .post .post-title {
-  font-size: 18px;
+  font-size: 13px;
 }
 
 .post .post-title.title-sm {
@@ -1549,4 +1549,17 @@ textarea.input {
 }
 .mid{
     text-align: center;
+}
+.box-emage {
+    height: 250px;
+}
+.image-avatar{
+    height: 30px;
+    width: 30px;
+}
+.image-post-detail {
+    height: 400px;
+}
+.image-title {
+    height: 500px;
 }

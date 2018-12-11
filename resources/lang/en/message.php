@@ -38,4 +38,6 @@ return [
     'adminlte' => 'AdminLTE',
     'error' => 'Account name or password incorrect',
     'not_match' => 'not_match',
+    'error_category' => 'Category not found!',
+    'category_notmatch' => 'category_notmatch',
 ];

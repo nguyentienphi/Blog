@@ -16,9 +16,14 @@ class Post extends Model
     {
         return $this->belongsTo(Category::class);
     }
-    
+
     public static function sortPost()
     {
         return Post::orderBy('created_at', 'desc');
+    }
+
+    public function comments()
+    {
+        return $this->HasMany(Comment::class);
     }
 }
