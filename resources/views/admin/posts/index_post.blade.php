@@ -8,9 +8,13 @@
                     <i class="fa fa-paint-brush"></i>@lang('message.createPost')</a>
             </h3>
         </div>
-        @if(session()->has('success'))
+        @if(session()->has(trans('message.success')))
             <div class="alert alert-success">
-                {{ session('success') }}
+                {{session(trans('message.success'))}}
+            </div>
+        @elseif(session()->has(trans('message.fail')))
+            <div class="alert alert-success">
+                {{session(trans('message.fail'))}}
             </div>
         @endif
         <div class="box-body">
