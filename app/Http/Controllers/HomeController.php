@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Post;
 
 class HomeController extends Controller
 {
@@ -14,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        
+        $this->middleware('auth');
     }
 
     /**
@@ -24,8 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $max = Post::sortPost()->first();
-        $post = Post::sortPost()->paginate(config('blog.paginate'));
-        return view('home', compact('max', 'post'));
+        return view('home');
     }
 }
