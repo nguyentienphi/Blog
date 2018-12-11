@@ -4,4 +4,5 @@ return [
     'role_id' => 1,
     'admin' => 0,
     'paginate' => 9,
+    'post_paginate' => 5
 ];

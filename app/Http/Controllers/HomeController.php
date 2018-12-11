@@ -35,7 +35,7 @@ class HomeController extends Controller
         return view('post_details',compact('post'));
     }
 
-    public function showCategory($id, Request $request)
+    public function showCategory($id)
     {
         try
         {

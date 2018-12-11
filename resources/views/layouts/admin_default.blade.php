@@ -23,10 +23,14 @@
             <section class="sidebar">
                 <div class="user-panel">
                     <div class="pull-left image">
-                        {{ Html::image(asset('storage/image/avatar/'.Auth::user()->avatar), '', ['class' => 'img-circle']) }}
+                        @if( Auth::user()->avatar != null )
+                            {{ Html::image(asset('storage/image/avatar/'.Auth::user()->avatar), '', ['class' => 'img-circle']) }}
+                        @else
+                            {{ Html::image(asset('storage/image/abstract-user-flat-3.svg'), '', ['class' => 'img-circle']) }}
+                        @endif
                     </div>
                     <div class="pull-left info">
-                         {{ Auth::user()->name }}
+                        {{ Auth::user()->name }}
                     </div>
                 </div>
                 <form action="#" method="get" class="sidebar-form">
@@ -54,10 +58,10 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> @lang('message.category_management')</a></li>
-                            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> @lang('message.user')</a></li>
-                            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> @lang('message.post')</a></li>
-                            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> @lang('message.comment')</a></li>
+                            <li><a href=""><i class="fa fa-circle-o"></i> @lang('message.category_mangement')</a></li>
+                            <li><a href=""><i class="fa fa-circle-o"></i> @lang('message.user')</a></li>
+                            <li><a href="{{ route('adminpost.index') }}"><i class="fa fa-circle-o"></i> @lang('message.post')</a></li>
+                            <li><a href=""><i class="fa fa-circle-o"></i> @lang('message.comment')</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
@@ -65,7 +69,6 @@
                             <span>@lang('message.logout')</span>
                         </a>
                     </li>
-
                 </ul>
             </section>
         </aside>
@@ -85,5 +88,6 @@
         </footer>
     </div>
     <script src="{{asset('js/adminlte.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/style.js')}}"></script>
 </body>
 </html>

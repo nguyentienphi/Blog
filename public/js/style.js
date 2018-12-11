@@ -103,6 +103,14 @@ $(document).ready(function () {
             }
         });
     });
+    $('.delete').click(function () {
+        var result = confirm('Do you want to delete?');
+        if (result) {
+            return true;
+        } else {
+            return false;
+        }
+    });
 });
 
 /***/ })
