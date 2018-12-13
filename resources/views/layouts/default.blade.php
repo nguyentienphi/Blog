@@ -56,7 +56,8 @@
                             <li><a href="{{ route('login') }}">@lang('message.login')</a></li>
                             <li><a href=" {{ route('register') }} ">@lang('message.register')</a></li>
                         @else
-                        <li class="has-dropdown"><a>{{Auth::user()->name}}
+                        <li class="has-dropdown">
+                            <a>{{Auth::user()->name}}
                                 @if(isset(Auth::user()->avatar))
                                     <img src="../storage/image/avatar/{{Auth::user()->avatar}}" class="img-circle" alt="Cinque Terre" width="30px" height="30px">
                                 @else
@@ -131,7 +132,6 @@
                     </ul>
                 </div>
                 <div class="col-md-6 col-md-pull-6">
-                    <div class="footer-copyright">
                          &copy;@lang('message.infomation')<i class="fa fa-heart-o" aria-hidden="true"></i> @lang('message.by') <a href="https://colorlib.com" target="_blank">@lang('message.colorlib')</a>
                     </div>
                 </div>

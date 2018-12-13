@@ -26,5 +26,13 @@ return [
     'verification_link' => 'A fresh verification link has been sent to your email address.',
     'check' => 'Before proceeding, please check your email for a verification link.',
     'send_mail_link_error' => 'If you did not receive the email',
-    'click_continue' => 'click here to request another'
+    'click_continue' => 'click here to request another',
+    'category' => 'Category',
+    'contact' => 'Contact',
+    'logo' => 'Nguyễn Tiến Phi',
+    'info' => 'Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.',
+    'infomation' => 'All rights reserved | This template is made with ',
+    'copyright' => 'Copyright',
+    'colorlib' => 'Colorlib',
+    'by' => 'by'
 ];

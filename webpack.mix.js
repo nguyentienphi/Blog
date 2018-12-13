@@ -24,3 +24,4 @@ mix.styles([
         'resources/css/log.css',
 	], 'public/css/all.css');
 mix.js('resources/js/style.js', 'public/js/style.js');
+mix.copyDirectory('resources/fonts', 'public/fonts');
