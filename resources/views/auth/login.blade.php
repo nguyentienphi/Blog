@@ -40,6 +40,13 @@
                                 </div>
                             </div>
                         {{ Form::close() }}
+                        <div class="row">
+                            <div class="col-md-12">
+                                @if(session()->has(trans('message.not_match')))
+                                    <p class="alert alert-danger"> {{ session(trans('message.not_match')) }}</p>
+                                @endif()
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

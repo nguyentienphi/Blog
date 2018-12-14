@@ -6,7 +6,7 @@
                 <div class="card">
                     <div class="card-header">@lang('message.register')</div>
                     <div class="card-body">
-                        {{ Form::open(['route' => 'register']) }}
+                        {{ Form::open(['route' => 'register', 'enctype' => 'multipart/form-data']) }}
                             <div class="form-group row">
                                 {{ Form::label(trans('message.name'), '', ['class' => 'col-md-4 col-form-label text-md-right']) }}
                                 <div class="col-md-6">

@@ -132,6 +132,7 @@
                     </ul>
                 </div>
                 <div class="col-md-6 col-md-pull-6">
+                    <div class="footer-copyright">
                          &copy;@lang('message.infomation')<i class="fa fa-heart-o" aria-hidden="true"></i> @lang('message.by') <a href="https://colorlib.com" target="_blank">@lang('message.colorlib')</a>
                     </div>
                 </div>
