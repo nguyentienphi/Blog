@@ -45,7 +45,7 @@ return [
     'allright' => 'All rights reserved.',
     'user' => 'Management User',
     'post' => 'Management Post',
-    'category_management' => 'Management Category',
+    'category_mangement' => 'Management Category',
     'comment' => 'Management Comment',
     'admin' => 'AdminLTE',
     'main_navigation' => 'MAIN NAVIGATION',
@@ -71,4 +71,5 @@ return [
     'successfull' => 'Succes full. Thank you!',
     'fail' => 'fail',
     'action_fail' => 'Fail. Thank you!',
+    'createCategory' => 'Create Category'
 ];

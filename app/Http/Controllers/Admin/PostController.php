@@ -33,7 +33,7 @@ class PostController extends Controller
             $post['image'] = $nameImg;
             Post::create($post);
 
-            return back()->with(trans('message.successfull'), trans('message.success'));
+            return back()->with(trans('message.success'), trans('message.successfull'));
         } catch (Exception $e) {
             return back()->with(trans('message.fail', trans('message.action_fail')));
         }
@@ -60,7 +60,7 @@ class PostController extends Controller
             $post = Post::findOrFail($post->id);
             $post->update($input);
 
-            return back()->with(trans('message.successfull'), trans('message.success'));
+            return back()->with(trans('message.success'), trans('message.successfull'));
         } catch (Exception $e) {
             return back()->with(trans('message.fail', trans('message.action_fail')));
         }
@@ -72,7 +72,7 @@ class PostController extends Controller
         {
             Post::findOrFail($id)->delete();
 
-            return back()->with(['success' => trans('message.success')]);
+            return back()->with(trans('message.success'), trans('message.successfull'));
         } catch (Exception $e) {
             return back()->with(trans('message.fail', trans('message.action_fail')));
         }
