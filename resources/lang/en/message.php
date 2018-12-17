@@ -71,5 +71,6 @@ return [
     'successfull' => 'Succes full. Thank you!',
     'fail' => 'fail',
     'action_fail' => 'Fail. Thank you!',
-    'createCategory' => 'Create Category'
+    'createCategory' => 'Create Category',
+    'content' => 'Content',
 ];
