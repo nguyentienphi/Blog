@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
+use App\Models\Category;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,24 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $postMax = Post::sortPost()->first();
+        $post = Post::paginate(config('blog.paginate'));
+        return view('home', compact('post', 'postMax'));
+    }
+
+    public function showPost(Post $post)
+    {
+        return view('post_details',compact('post'));
+    }
+
+    public function showCategory($id, Request $request)
+    {
+        try
+        {
+            $post = Category::findOrfail($id)->posts()->get();
+            return view('category_details',compact('post'));
+        } catch (Exception $e) {
+            return back()->with(trans('message.category_notmatch'), trans('message.error_category'));
+        }
     }
 }

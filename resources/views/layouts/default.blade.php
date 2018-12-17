@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CMuli:400,700" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="{{asset('css/all.css')}}" />
@@ -46,7 +47,9 @@
                             <div class="dropdown">
                                 <div class="dropdown-body">
                                     <ul class="dropdown-list">
-                                        <li><a href=""></a></li>
+                                        @foreach($category as $categories)
+                                             <li><a href="{{ route('category-details', $categories->id) }}">{{ $categories->name }}</a></li>
+                                        @endforeach()
                                     </ul>
                                 </div>
                             </div>
@@ -58,10 +61,10 @@
                         @else
                         <li class="has-dropdown">
                             <a>{{Auth::user()->name}}
-                                @if(isset(Auth::user()->avatar))
-                                    <img src="../storage/image/avatar/{{Auth::user()->avatar}}" class="img-circle" alt="Cinque Terre" width="30px" height="30px">
+                                @if((Auth::user()->avatar != null))
+                                    {{ Html::image(asset('storage/image/avatar/'.Auth::user()->avatar), '', ['class' => 'img-circle image-avatar']) }}
                                 @else
-                                    <img src="../storage/image/abstract-user-flat-3.svg" class="img-circle" alt="Cinque Terre" width="30px" height="30px">
+                                    {{ Html::image(asset('storage/image/abstract-user-flat-3.svg'), '', ['class' => 'img-circle image-avatar']) }}
                                 @endif
                             </a>
                             <ul class="dropdown">
@@ -117,8 +120,9 @@
                         <h3 class="footer-title">@lang('message.category')</h3>
                         <div class="category-widget">
                             <ul>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
+                                @foreach($category as $categories)
+                                    <li><a href="{{ route('category-details', $categories->id) }}">{{ $categories->name }}</a></li>
+                                @endforeach()
                             </ul>
                         </div>
                     </div>
