@@ -21,10 +21,10 @@
                     <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-3">
-                            @if( Auth::user()->avatar != null)
-                                 {{ Html::image(asset('storage/image/avatar/'. Auth::user()->avatar), '',  ['class' => 'img-admin img-circle']) }}
+                             @if( Auth::user()->avatar != null )
+                                {{ Html::image(asset('storage/image/avatar/'.Auth::user()->avatar), '', ['class' => 'img-circle img-admin']) }}
                             @else
-                                 {{ Html::image(asset('storage/image/abstract-user-flat-3.svg'), '',  ['class' => 'img-admin img-circle']) }}
+                                {{ Html::image(asset('storage/image/abstract-user-flat-3.svg'), '', ['class' => 'img-circle img-admin']) }}
                             @endif
                         </div>
                         <div class="col-md-3"></div>

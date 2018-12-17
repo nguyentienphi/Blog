@@ -8,6 +8,26 @@
 .mysql {
     width: 50%;
 }
+.error-post{
+    color: red;
+}
+.col-title-post{
+    width: 500px;
+}
+.col-name{
+    width: 200px;
+}
+.col-image{
+    width: 150px;
+}
+.img-post {
+    height: 70px;
+    width: 150px;
+}
 .img-admin{
     width: 250px;
+}
+.img-post-edit{
+    height:250px;
+    width: 480px;
 }

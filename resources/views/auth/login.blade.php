@@ -11,8 +11,9 @@
                                  {{ Form::label(trans('message.email') , '', ['class' => 'col-md-4 col-form-label text-md-right']) }}
                                  <div class="col-md-6">
                                     {{ Form::email('email', '', ['class' => 'form-control' .($errors->has('email') ? ' is-invalid' : ''), 'required', 'autofocus']) }}
-                                    @include('commonts.errors')
+
                                 </div>
+                                 @include('commonts.errors')
                             </div>
                             <div class="form-group row">
                                 {{ Form::label(trans('message.password'), '', ['class' => 'col-md-4 col-form-label text-md-right', 'required']) }}

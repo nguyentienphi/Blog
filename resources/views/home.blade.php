@@ -8,7 +8,7 @@
                     <p class="alert alert-danger">
                         {{ session(trans('message.category_notmatch')) }}
                     </p>
-                @endif()
+                @endif
             </div>
         </div>
         <div class="section">
@@ -34,8 +34,7 @@
                         <div class="col-md-4">
                             <div class="post">
                                 <a class="post-img box-emage" href="{{ route('post-details', $posts) }}">
-                                    <img src="../storage/image/post/{{ $posts->image }}">
-                                     {{ Html::image(asset('storage/image/post/'.$posts->image), '') }}
+                                    {{ Html::image(asset('storage/image/post/'.$posts->image), '') }}
                                 </a>
                                 <div class="post-body">
                                     <h3 class="post-title"><a href="{{ route('post-details', $posts) }}"> {{ $posts->title }} </a></h3>

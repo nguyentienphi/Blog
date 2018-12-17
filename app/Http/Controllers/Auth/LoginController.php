@@ -51,8 +51,7 @@ class LoginController extends Controller
                 return redirect()->route('admin');
             }
         } else {
-            $request->session()->flash(trans('message.not_match') , trans('message.error'));
-            return back();
+            return back()->with([trans('message.not_match') => trans('message.error')]);
         }
     }
 }
