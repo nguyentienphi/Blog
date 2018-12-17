@@ -25,3 +25,13 @@ mix.styles([
 	], 'public/css/all.css');
 mix.js('resources/js/style.js', 'public/js/style.js');
 mix.copyDirectory('resources/fonts', 'public/fonts');
+mix.styles([
+        'resources/css/bootstrap.min.css',
+        'resources/css/font-awesome.min.css',
+        'resources/css/ionicons.min.css',
+        'resources/css/jquery-jvectormap.css',
+        'resources/css/AdminLTE.min.css',
+        'resources/css/_all-skins.min.css',
+        'resources/css/elements.css',
+    ], 'public/css/admin.css');
+mix.js('resources/js/adminlte.min.js', 'public/js');

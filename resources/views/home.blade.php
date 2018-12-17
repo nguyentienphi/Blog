@@ -50,4 +50,7 @@
             {{ $post->links() }}
         </div>
     </div>
+    <div>
+        {{ $post->links() }}
+    </div>
 @endsection()
