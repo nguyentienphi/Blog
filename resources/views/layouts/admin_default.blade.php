@@ -49,13 +49,13 @@
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="{{ route('admincategory.index') }}"><i class="fa fa-circle-o"></i> @lang('message.category_mangement')</a></li>
-                            <li><a href=""><i class="fa fa-circle-o"></i> @lang('message.user')</a></li>
+                            <li><a href="{{ route('adminuser.index') }}"><i class="fa fa-circle-o"></i> @lang('message.user')</a></li>
                             <li><a href="{{ route('adminpost.index') }}"><i class="fa fa-circle-o"></i> @lang('message.post')</a></li>
-                            <li><a href=""><i class="fa fa-circle-o"></i> @lang('message.comment')</a></li>
+                            <li><a href="{{ route('admincomment-mangement.index') }}"><i class="fa fa-circle-o"></i> @lang('message.comment')</a></li>
                         </ul>
                     </li>
-                    <li class="treeview">
-                        <a href="#">
+                    <li>
+                        <a href="{{ route('adminlogout-admin') }}">
                             <span>@lang('message.logout')</span>
                         </a>
                     </li>

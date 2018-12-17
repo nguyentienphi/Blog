@@ -30,4 +30,8 @@
     <span class="invalid-feedback">
         <strong>{{($errors->first('title'))}}</strong>
     </span>
+@elseif ($errors->has('avatar'))
+    <span>
+        <strong>{{($errors->first('avatar'))}}</strong>
+    </span>
 @endif

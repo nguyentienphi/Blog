@@ -18,3 +18,14 @@
 .image-title {
     height: 500px;
 }
+.image-profile{
+    height: 200px;
+    width: 200px;
+}
+.form-edit-profile{
+    margin-top: 15px;
+    text-align: center;
+}
+.error-profile{
+    color:red;
+}

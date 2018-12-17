@@ -73,6 +73,7 @@
                                 </a>
                                 {{ Form::open(['route' => 'logout', 'id' => 'logout-form', 'display' => 'none']) }}
                                 {{ Form::close() }}
+                                <a href="{{ route('edit-profile', Auth::user()->id) }}">Edit Profile</a>
                             </ul>
                         </li>
                         @endguest
